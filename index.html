@@ -1,1 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Group2 Presentation</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header" id="siteHeader">
+    <div class="nav-wrap">
+      <nav class="nav-left" aria-label="Main navigation">
+        <div class="nav-item">
+          <a href="#">Group2</a>
+          <span class="caret">▾</span>
+          <div class="dropdown">
+            <a href="#overview">Project Overview</a>
+            <a href="#analysis">Market Analysis</a>
+            <a href="#recommendations">Recommendations</a>
+          </div>
+        </div>
 
+        <div class="nav-item">
+          <a href="#about">About</a>
+          <span class="caret">▾</span>
+          <div class="dropdown">
+            <a href="#about">Team Members</a>
+            <a href="#about">Project Purpose</a>
+            <a href="#about">Course Context</a>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <a href="#course">IB_MKT456</a>
+          <span class="caret">▾</span>
+          <div class="dropdown">
+            <a href="#course">Assignment Goals</a>
+            <a href="#course">Research Findings</a>
+            <a href="#course">Final Takeaways</a>
+          </div>
+        </div>
+      </nav>
+
+      <a href="#top" class="logo-badge" aria-label="Group2 logo">
+        <div>
+          <span>G2</span>
+          TEAM PROJECT
+        </div>
+      </a>
+
+      <div class="nav-right"></div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Group2 Presentation</h1>
+        <p>Built in the style of a modern brand homepage and adapted into a clean course presentation format.</p>
+        <a class="hero-btn" href="#overview">VIEW PROJECT</a>
+      </div>
+    </section>
+
+    <section class="section" id="overview">
+      <h2 class="section-title">New Insights!</h2>
+      <div class="card-grid">
+        <article class="feature-card" id="analysis">
+          <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1200&q=80" alt="Presentation topic one" />
+          <h3>Market Analysis</h3>
+        </article>
+
+        <article class="feature-card" id="recommendations">
+          <img src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1200&q=80" alt="Presentation topic two" />
+          <h3>Strategic Recommendations</h3>
+        </article>
+      </div>
+    </section>
+
+    <section class="section featured" id="about">
+      <h2 class="section-title">Featured Sections</h2>
+      <div class="mini-grid">
+        <article class="mini-card">
+          <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=900&q=80" alt="Team section" />
+          <div class="copy">
+            <h4>Team</h4>
+            <p>Introduce the members of Group2 and define each role within the project.</p>
+          </div>
+        </article>
+
+        <article class="mini-card" id="course">
+          <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=80" alt="Course section" />
+          <div class="copy">
+            <h4>IB_MKT456</h4>
+            <p>Connect the presentation directly to the course, assignment goals, and marketing concepts.</p>
+          </div>
+        </article>
+
+        <article class="mini-card">
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80" alt="Results section" />
+          <div class="copy">
+            <h4>Results</h4>
+            <p>End with the strongest conclusions, visuals, and key takeaways from your research.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const header = document.getElementById('siteHeader');
+
+    const onScroll = () => {
+      if (window.scrollY > 60) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    };
+
+    document.addEventListener('scroll', onScroll);
+    onScroll();
+  </script>
+</body>
+</html>
