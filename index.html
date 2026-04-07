@@ -3,122 +3,102 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Group2 Presentation</title>
+  <title>Group2 | Presentation</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="site-header" id="siteHeader">
-    <div class="nav-wrap">
-      <nav class="nav-left" aria-label="Main navigation">
+    <div class="nav-container">
+      <nav class="nav-left">
         <div class="nav-item">
           <a href="#">Group2</a>
-          <span class="caret">▾</span>
-          <div class="dropdown">
-            <a href="#overview">Project Overview</a>
-            <a href="#analysis">Market Analysis</a>
-            <a href="#recommendations">Recommendations</a>
-          </div>
+          <span class="caret">⌄</span>
         </div>
 
         <div class="nav-item">
           <a href="#about">About</a>
-          <span class="caret">▾</span>
-          <div class="dropdown">
-            <a href="#about">Team Members</a>
-            <a href="#about">Project Purpose</a>
-            <a href="#about">Course Context</a>
-          </div>
+          <span class="caret">⌄</span>
         </div>
 
         <div class="nav-item">
           <a href="#course">IB_MKT456</a>
-          <span class="caret">▾</span>
-          <div class="dropdown">
-            <a href="#course">Assignment Goals</a>
-            <a href="#course">Research Findings</a>
-            <a href="#course">Final Takeaways</a>
-          </div>
+          <span class="caret">⌄</span>
         </div>
       </nav>
 
-      <a href="#top" class="logo-badge" aria-label="Group2 logo">
-        <div>
-          <span>G2</span>
-          TEAM PROJECT
-        </div>
+      <a href="#" class="logo-wrap" aria-label="Group2 logo">
+        <img src="assets/logo.png" alt="Group2 logo" class="logo" />
       </a>
 
       <div class="nav-right"></div>
     </div>
   </header>
 
-  <main id="top">
+  <main>
     <section class="hero">
+      <img src="assets/hero.jpg" alt="Hero image" class="hero-image" />
+      <div class="hero-overlay"></div>
+
       <div class="hero-content">
         <h1>Group2 Presentation</h1>
-        <p>Built in the style of a modern brand homepage and adapted into a clean course presentation format.</p>
-        <a class="hero-btn" href="#overview">VIEW PROJECT</a>
+        <p>Built for IB_MKT456 in the style of a modern branded homepage.</p>
+        <a href="#flavors" class="hero-button">VIEW NOW</a>
       </div>
     </section>
 
-    <section class="section" id="overview">
-      <h2 class="section-title">New Insights!</h2>
-      <div class="card-grid">
-        <article class="feature-card" id="analysis">
-          <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1200&q=80" alt="Presentation topic one" />
-          <h3>Market Analysis</h3>
-        </article>
-
-        <article class="feature-card" id="recommendations">
-          <img src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1200&q=80" alt="Presentation topic two" />
-          <h3>Strategic Recommendations</h3>
-        </article>
-      </div>
+    <section class="intro-section" id="flavors">
+      <h2>New Flavors!</h2>
     </section>
 
-    <section class="section featured" id="about">
-      <h2 class="section-title">Featured Sections</h2>
-      <div class="mini-grid">
-        <article class="mini-card">
-          <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=900&q=80" alt="Team section" />
-          <div class="copy">
-            <h4>Team</h4>
-            <p>Introduce the members of Group2 and define each role within the project.</p>
-          </div>
-        </article>
+    <section class="flavor-grid">
+      <a href="#" class="flavor-card">
+        <img src="assets/dr-boylan.jpg" alt="Dr. Boylan section image" />
+        <div class="card-overlay"></div>
+        <h3>Dr. Boylan</h3>
+      </a>
 
-        <article class="mini-card" id="course">
-          <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=80" alt="Course section" />
-          <div class="copy">
-            <h4>IB_MKT456</h4>
-            <p>Connect the presentation directly to the course, assignment goals, and marketing concepts.</p>
-          </div>
-        </article>
+      <a href="#" class="flavor-card">
+        <img src="assets/lemon-lime.jpg" alt="Lemon Lime section image" />
+        <div class="card-overlay"></div>
+        <h3>Lemon Lime</h3>
+      </a>
+    </section>
 
-        <article class="mini-card">
-          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80" alt="Results section" />
-          <div class="copy">
-            <h4>Results</h4>
-            <p>End with the strongest conclusions, visuals, and key takeaways from your research.</p>
-          </div>
-        </article>
+    <section class="section-title-block" id="about">
+      <h2>Featured Sections</h2>
+    </section>
+
+    <section class="content-preview">
+      <div class="preview-box">
+        <h4>About</h4>
+        <p>Add your team, project summary, and brand overview here.</p>
+      </div>
+
+      <div class="preview-box" id="course">
+        <h4>IB_MKT456</h4>
+        <p>Add your course concepts, analysis, and assignment findings here.</p>
+      </div>
+
+      <div class="preview-box">
+        <h4>Conclusion</h4>
+        <p>Add your recommendations, takeaways, and final presentation points here.</p>
       </div>
     </section>
   </main>
 
   <script>
-    const header = document.getElementById('siteHeader');
+    const header = document.getElementById("siteHeader");
 
-    const onScroll = () => {
-      if (window.scrollY > 60) {
-        header.classList.add('scrolled');
+    function handleScroll() {
+      if (window.scrollY > 40) {
+        header.classList.add("scrolled");
       } else {
-        header.classList.remove('scrolled');
+        header.classList.remove("scrolled");
       }
-    };
+    }
 
-    document.addEventListener('scroll', onScroll);
-    onScroll();
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
   </script>
 </body>
 </html>
